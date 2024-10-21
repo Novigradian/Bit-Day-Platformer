@@ -1,26 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    [HideInInspector]public bool dashUnlocked;
+    [HideInInspector]public bool jumpUnlocked;
+    [HideInInspector]public bool sprintUnlocked;
+    [HideInInspector]public float jumpMultiplier;
+    private int bulletsCount=0;
     private AudioSource slash;
     
     public GameObject rock;
+    public TextMeshProUGUI AmmoUI;
     private float rockDir;
 
     [SerializeField]
     private UIManager uiManager;
-    [SerializeField]
-    public int health;
+    
+    [HideInInspector] public int health=3;
 
     private Rigidbody2D rb;
     private Rigidbody2D groundRb;
     private Transform tr;
     private float inputDirection;
-    public float speed;
+    [HideInInspector]public float speed=90;
 
     private bool isSprint;
     private float sprintMultiplier;
@@ -37,8 +45,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 groundVelocity;
 
-    [SerializeField]
-    private Vector2 knockBackDirection;
+    private Vector2 knockBackDirection = new Vector2(0.9f,0.9f);
 
     private Animator anim;
 
@@ -48,6 +55,10 @@ public class PlayerController : MonoBehaviour
     float dir;
     void Start()
     {
+        dashUnlocked=false;
+        jumpUnlocked=false;
+        sprintUnlocked=false;
+        jumpMultiplier=1f;
         slash = gameObject.GetComponent<AudioSource>();        
         Time.timeScale = 1f;
 
@@ -88,6 +99,9 @@ public class PlayerController : MonoBehaviour
 
         ResetIfFall();
 
+        if (AmmoUI != null) {
+            AmmoUI.text = "Ammo Count: " + bulletsCount.ToString();
+        }
     }
 
     private void ResetIfFall()
@@ -119,10 +133,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void AddBullet(int n) {
+        bulletsCount += n;
+        Debug.Log("Bullet+1");
+    }
+
     private void AddHorizontalVelocity()
     {
         sprintMultiplier = 1f;
-        if (isSprint && isGrounded)
+        if (isSprint && isGrounded && sprintUnlocked)
         {
             sprintMultiplier = 2f;
         }
@@ -166,11 +185,11 @@ public class PlayerController : MonoBehaviour
 
     void OnJump()
     {
-        if (jumpCount <= 1)
+        if (jumpCount <= 0 || jumpCount <= 1 && jumpUnlocked)
         {
             anim.SetBool("isJump", true);
 
-            rb.AddForce(transform.up * 1.25f, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * 1.25f * jumpMultiplier, ForceMode2D.Impulse);
             jumpCount += 1;
             StartCoroutine(waitSeconds(1f));
             isGrounded = false;
@@ -179,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDash( )
     {
-        if (!isGrounded && !isDashing)
+        if (!isGrounded && !isDashing && dashUnlocked)
         {
             isDashing = true;
 
@@ -202,9 +221,13 @@ public class PlayerController : MonoBehaviour
 
     void OnAttack()
     {
-        slash.Play();
-        Instantiate(rock, transform.position, transform.rotation);
-        Debug.Log((rock, transform.position, transform.rotation));
+        if (bulletsCount>0) {
+            bulletsCount--;
+            slash.Play();
+            Instantiate(rock, transform.position, transform.rotation);
+            Debug.Log((rock, transform.position, transform.rotation));
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
