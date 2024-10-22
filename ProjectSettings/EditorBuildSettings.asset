@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Bit Day Activity/Menu.unity
     guid: df57bb34dbb1c094d8fc392493f68d86
+  - enabled: 1
+    path: Assets/Scenes/Bit Day Activity/BitDay Level 1.unity
+    guid: e21f6fa8ee7ff459cabe77e0043a40a3
+  - enabled: 1
+    path: Assets/Scenes/Success 1.unity
+    guid: c7f71e24cebfa499ea7b56cbf990f3e2
+  - enabled: 1
+    path: Assets/Scenes/Success 2.unity
+    guid: 4f28e53c6be2a482599173e5d2a3430c
+  - enabled: 1
+    path: Assets/Scenes/Success 3.unity
+    guid: b32fb44cdde8a435ab1f68c07c86833e
+  - enabled: 1
+    path: Assets/Scenes/Success 6.unity
+    guid: fad587ff1090c415a9a0ff0dfea16f1c
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 89e24e78831e57e4799d3987ff44cc81
@@ -17,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 1910d65dc5bc4db45963c64f6c4dfc28
+  - enabled: 1
+    path: Assets/Scenes/Bit Day Activity/BitDay Level 5.unity
+    guid: d2f09745518b047fbbbe8422f713cad2
+  - enabled: 1
+    path: Assets/Scenes/Bit Day Activity/BitDay Level 6.unity
+    guid: b3b9966cbf6af4a43934c9c54bd0d3df
   m_configObjects: {}

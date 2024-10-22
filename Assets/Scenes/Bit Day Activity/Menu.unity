@@ -420,8 +420,8 @@ RectTransform:
   m_Children:
   - {fileID: 1900235315}
   - {fileID: 440407603}
-  - {fileID: 1946330902}
   - {fileID: 802097949}
+  - {fileID: 1946330902}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -474,11 +474,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740262222}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchoredPosition: {x: 121.7, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802097950
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nDouble jump enabled. \nHold shift to sprint.\nWall Jump Enabled\nPress
-    Q to dash in air.\nPress E to attack with rock.\nThere is coyote time.\n\nTurtles
-    have 1 health, \nradishes have 3 health,\nand bees have 2 health and follow player.\n\nGoal:
-    Get the mushroom"
+  m_text: "\nGOAL: Get the mushroom\n\nWall Jump enabled\nPress E to attack with
+    rock.\n\nTurtles have 1 health, \nradishes have 3 health,\nand bees have 2 health
+    and follow player.\n\n[Unlockable]\nHold shift to sprint.\nDouble jump. \nPress
+    Q while in air to dash.\nEven more cool things are possible in the editor..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33187df96be020e42b67e0acad3f6364, type: 2}
   m_sharedMaterial: {fileID: -8317436308763660507, guid: 33187df96be020e42b67e0acad3f6364, type: 2}
@@ -907,11 +907,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740262222}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66, y: 28}
+  m_AnchoredPosition: {x: -17.4, y: 107.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946330903
@@ -934,7 +934,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2D Platformer Project
+  m_text: 'Unity For Beginners
+
+    2D Platformer Project'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -997,7 +999,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -126.99353, w: 0}
+  m_margin: {x: 0, y: 0, z: -283.63892, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

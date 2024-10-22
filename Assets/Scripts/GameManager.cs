@@ -29,4 +29,22 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    public void Success1()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void Success2()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void Success3()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void Success6()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
