@@ -6,7 +6,7 @@ public class JumpModifier : MonoBehaviour
 {
 
     public bool doubleJump=false;
-    [Range(1,2)]public float jumpHeightMultiplier=1;
+    [Range(1,1.6f)]public float jumpHeightMultiplier=1;
     // Start is called before the first frame update
     void Start()
     {
