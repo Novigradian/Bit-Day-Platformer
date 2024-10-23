@@ -742,7 +742,6 @@ GameObject:
   - component: {fileID: 196907070}
   - component: {fileID: 196907071}
   - component: {fileID: 196907072}
-  - component: {fileID: 196907073}
   m_Layer: 0
   m_Name: Ninja Frog
   m_TagString: Player
@@ -1106,20 +1105,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &196907073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196907063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d835b7071bd548ab8c366481c34f05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprint: 0
-  dash: 0
 --- !u!1 &217206485
 GameObject:
   m_ObjectHideFlags: 0
